@@ -1,0 +1,65 @@
+<title>Nuestro Universo P&C</title>
+<meta name="theme-color" content="#050711" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+
+<canvas id="sky"></canvas>
+<div class="nebula"></div>
+
+<header class="hero">
+  <div class="monogram">P <span>✦</span> C</div>
+  <h1>Nuestro Universo</h1>
+  <p>Cada estrella guarda un pedacito de nuestra historia.</p>
+</header>
+
+<button id="sound" class="glass sound" aria-label="Reproducir música" aria-pressed="false">♫</button>
+<audio id="background-music" src="audio/piano.mp3" loop preload="metadata"></audio>
+<div id="welcome" class="welcome" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+  <div class="welcome-card">
+    <div class="monogram">P ✦ C</div>
+    <h2 id="welcome-title">Hay un universo esperándote.</h2>
+    <p>Recorre nuestro cielo. Cada estrella tiene algo que contarte.</p>
+    <button id="enter" class="glass">Entrar en nuestro universo</button>
+    <button id="enter-silent">Entrar sin música</button>
+  </div>
+</div>
+<p id="music-status" class="music-status" role="status"></p>
+<div class="hint">Arrastra para explorar · Toca una estrella</div>
+
+<main id="universe" tabindex="0" aria-label="Universo explorable. Arrastra o usa las flechas para desplazarte."><div id="memories" aria-label="Constelación de recuerdos"></div></main>
+<button id="home" class="glass home" aria-label="Volver al centro del universo">⌾ <span>Volver al centro</span></button>
+
+<section id="wedding" class="wedding glass" role="button" tabindex="0">
+  <span class="ring">✦</span>
+  <div>
+    <small>NUESTRA PRÓXIMA GRAN AVENTURA</small>
+    <strong>24 · 07 · 2027</strong>
+    <p id="countdown"></p>
+  </div>
+</section>
+
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="title" aria-hidden="true">
+  <div class="backdrop"></div>
+  <article class="card glass">
+    <button id="close" aria-label="Cerrar">×</button>
+    <div id="photo" class="photo"><span id="photo-placeholder">Vuestra foto aquí</span><img id="photo-img" alt="" hidden /></div>
+    <div class="copy">
+      <small id="date"></small>
+      <h2 id="title"></h2>
+      <p id="text"></p>
+      <button id="reveal" class="glass reveal" hidden>Un secreto más ✦</button>
+    </div>
+  </article>
+</div>
+
+<div id="finale" class="finale" role="dialog" aria-modal="true" aria-label="Nuestro universo P y C" aria-hidden="true">
+  <button id="finalClose" aria-label="Cerrar">×</button>
+  <div class="constellation">P <i>✦</i> C</div>
+  <p>Entre millones de estrellas,</p>
+  <h2>te encontré a ti.</h2>
+  <small>Y volvería a elegirte en cada universo.</small>
+</div>
+
+<script src="app.js"></script>
